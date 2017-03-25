@@ -14,12 +14,13 @@
 
     <script type="text/javascript" src='script/ZipFile.complete.js'></script>
 
-    <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script> 
-    <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script> 
+    <script type="text/javascript" src="https://raw.githubusercontent.com/canvg/canvg/master/rgbcolor.js"></script> 
+    <script type="text/javascript" src="https://raw.githubusercontent.com/canvg/canvg/master/canvg.js"></script> 
 
-    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 
-    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js'></script>
+
+  <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <script type="text/javascript" src="script/sb2.js"></script> 
     <link rel="stylesheet" type="text/css" media="screen" href="css/block.css">
 
@@ -267,7 +268,7 @@
 
 		blockLibrary = 
 
-// tips: % is a number literal, $ is a number dropdown (specially handled), ~ is a locked dropdown (specially handled), & is anything literal (including strings), @ is bool, £ is static text eg variables, ` is colours.
+// tips: % is a number literal, $ is a number dropdown (specially handled), ~ is a locked dropdown (specially handled), & is anything literal (including strings), @ is bool, Â£ is static text eg variables, ` is colours.
 
 {
 	"englishUK": {
@@ -617,7 +618,7 @@
 
 				//variables
 
-				"[rep]£0[/rep]",
+				"[rep]Â£0[/rep]",
 
 				//lists
 
@@ -858,7 +859,7 @@
 
 		} else {
 
-			if (reporterType == "£") {
+			if (reporterType == "Â£") {
 
 				scripttext += block;
 
@@ -902,7 +903,7 @@
 		anindex = processTxt.indexOf("&");
 		doindex = processTxt.indexOf("$");
 		sqindex = processTxt.indexOf("~");
-		poindex = processTxt.indexOf("£");
+		poindex = processTxt.indexOf("Â£");
 		atindex = processTxt.indexOf("@");
 		thindex = processTxt.indexOf("`"); //th for thing because i don't know what it is :I
 
@@ -912,7 +913,7 @@
 		if ((anindex < min) && (anindex != -1)) { min = anindex; reporterType = "&" }
 		if ((doindex < min) && (doindex != -1)) { min = doindex; reporterType = "$" }
 		if ((sqindex < min) && (sqindex != -1)) { min = sqindex; reporterType = "~" }
-		if ((poindex < min) && (poindex != -1)) { min = poindex; reporterType = "£" }
+		if ((poindex < min) && (poindex != -1)) { min = poindex; reporterType = "Â£" }
 		if ((atindex < min) && (atindex != -1)) { min = atindex; reporterType = "@" }
 		if ((thindex < min) && (thindex != -1)) { min = thindex; reporterType = "`" }
 	}
